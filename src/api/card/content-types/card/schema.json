@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards",
+  "info": {
+    "singularName": "card",
+    "pluralName": "cards",
+    "displayName": "Card",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "idea_short": {
+      "type": "text"
+    },
+    "idea_full": {
+      "type": "richtext"
+    },
+    "example_short": {
+      "type": "text"
+    },
+    "example_long": {
+      "type": "richtext"
+    },
+    "solution_short": {
+      "type": "text"
+    },
+    "solution_long": {
+      "type": "richtext"
+    },
+    "reference": {
+      "displayName": "references",
+      "type": "component",
+      "repeatable": true,
+      "component": "references.references"
+    }
+  }
+}
