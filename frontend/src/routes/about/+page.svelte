@@ -8,9 +8,7 @@
 </script>
 
 <Header selectedPage="about" />
-<main>
-  <div class="container mx-auto mt-4">
-  </div>
-  <button type="button" class="btn variant-filled-primary">Testing</button>
+<main class="container mx-auto mt-4">
+
 </main>
 

@@ -35,9 +35,9 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/" class="{selectedPage == 'index' ? 'text-white bg-primary-700 hover:bg-primary-500' : 'text-gray-300 bg-gray-900 hover:bg-gray-700 hover:text-white'} rounded-3xl px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-            <a href="/games" class="{selectedPage == 'games' ? 'text-white bg-primary-700 hover:bg-primary-500' : 'text-gray-300 bg-gray-900 hover:bg-gray-700 hover:text-white'} rounded-3xl px-3 py-2 text-sm font-medium">Games</a>
-            <a href="/about" class="{selectedPage == 'about' ? 'text-white bg-primary-700 hover:bg-primary-500' : 'text-gray-300 bg-gray-900 hover:bg-gray-700 hover:text-white'} rounded-3xl px-3 py-2 text-sm font-medium">About</a>
+            <a href="/" class="{selectedPage == 'index' ? 'text-white bg-primary-700 hover:bg-primary-500' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-3xl px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+            <a href="/games" class="{selectedPage == 'games' ? 'text-white bg-primary-700 hover:bg-primary-500' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-3xl px-3 py-2 text-sm font-medium">Games</a>
+            <a href="/about" class="{selectedPage == 'about' ? 'text-white bg-primary-700 hover:bg-primary-500' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-3xl px-3 py-2 text-sm font-medium">About</a>
           </div>
         </div>
       </div>
