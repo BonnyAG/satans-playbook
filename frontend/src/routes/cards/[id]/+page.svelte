@@ -5,7 +5,8 @@
 
 <script>
   // Import Components
-  import Header from '../../../lib/Header.svelte';
+  import Header from '$lib/Header.svelte';
+  import Card from '$lib/Card.svelte';
 
   // Get Cards data
   export let data;
@@ -19,28 +20,20 @@
     {type: "article", name:"Article", style: "bg-success-300 text-success-900"},
     {type: "research_paper", name:"Research Paper", style: "bg-surface-300 text-surface-900"}
   ]
-
-  /*let referenceOutput = [];
-
-  card.attributes.reference.forEach(ref => {
-    let obj = badgeColors[ref.type];
-    obj.url = ref.url;
-    obj.title = ref.title;
-    referenceOutput.push(obj);
-  })*/
 </script>
 
 <Header selectedPage="" />
 <main class="container mx-auto mt-4">
   <!-- Hero Text -->
   <div class="flex gap-4 content-end my-12">
-    <!-- Hero image -->
-    <div class="bg-white border-8 border-surface-500 shadow-md shadow-surface-500 text-slate-900 p-4 w-72 rounded-2xl col-auto hover:shadow-primary-800 hover:shadow-2xl transition flex flex-col text-center h-[26rem] scale-110">
-      <h2 class="h2 text-xl font-bold self-center uppercase">{card.attributes.title}</h2>
-      <p class="text-sm my-2">{card.attributes.idea_short}</p>
-      <p class="text-sm p-3 bg-primary-500 text-center text-white rounded-2xl italic my-2">{card.attributes.example_short}</p>
-      <p class="text-sm">{card.attributes.solution_short}</p>
-    </div>
+    <!-- Card -->
+    <Card
+      id={card.id}
+      title={card.attributes.title}
+      idea={card.attributes.idea_short}
+      example={card.attributes.example_short}
+      solution={card.attributes.solution_short}
+    />
 
     <!-- Hero Content -->
     <div class="flex content-end flex-col basis-2/3 px-6">
@@ -56,28 +49,28 @@
           <span>Back to Cards</span>
         </a>
       </div>
-      <hr class="mt-2 mb-3"/>
+      <hr class="mt-2 mb-5"/>
 
       <!-- Definition of the Spiritual Fallacy -->
-      <p><b class="text-primary-500">Definition: </b>{card.attributes.idea_full == null ? card.attributes.idea_short : card.attributes.idea_full}</p>
+      <p><b>Definition: </b>{card.attributes.idea_full == null ? card.attributes.idea_short : card.attributes.idea_full}</p>
 
       <!-- Example -->
-      <div class="text-white bg-primary-600 rounded-xl p-3 mt-4 ">
+      <div class="text-white bg-primary-600 rounded-xl p-3 mt-8 ">
         <h2 class="h2 mb-2 font-bold">What does this look like?</h2>
         <p>{card.attributes.example_long == null ? card.attributes.example_short : card.attributes.example_long}</p>
       </div>
 
       <!-- Solution -->
-      <h2 class="h2 mt-4 mb-2 font-bold">What do I do about it?</h2>
+      <h2 class="h2 mt-8 mb-2 font-bold">What do I do about it?</h2>
       <p>{card.attributes.solution_long == null ? card.attributes.solution_short : card.attributes.solution_long}</p>
 
       <!-- Resources -->
       {#if card.attributes.reference.length > 0}
-        <h2 class="h2 mt-4 mb-2 font-bold">More Resources</h2>
+        <h2 class="h2 mt-8 mb-2 font-bold">More Resources</h2>
         <nav class="list-nav">
           <ul>
             {#each card.attributes.reference as reference}
-              <li>
+              <li class="py-0.5">
                 <a href={reference.url} target="_blank">
                   <span class={`badge ${badgeColors.find(o => o.type == reference.type).style}`}>{badgeColors.find(o => o.type ==reference.type).name}</span>
                   <span class="flex-auto">{reference.title}</span>
