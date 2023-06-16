@@ -1,9 +1,6 @@
 <script lang="ts">
-  // Import functions
-  import { goto } from '$app/navigation';
-
   // Import components
-  import Header from '../../lib/Header.svelte';
+  import Header from '$lib/components/Header.svelte';
 
 </script>
 

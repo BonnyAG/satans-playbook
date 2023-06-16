@@ -5,8 +5,5 @@
 
   // Import CSS
   import '../app.postcss';
-
-  // Import Components
-  import Header from '../lib/Header.svelte';
 </script>
 <slot/>

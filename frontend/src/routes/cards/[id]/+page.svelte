@@ -5,8 +5,8 @@
 
 <script>
   // Import Components
-  import Header from '$lib/Header.svelte';
-  import Card from '$lib/Card.svelte';
+  import Header from '$lib/components/Header.svelte';
+  import Card from '$lib/components/Card.svelte';
 
   // Get Cards data
   export let data;
