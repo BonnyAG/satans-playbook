@@ -16,5 +16,5 @@
   <h2 class="h2 text-xl font-bold self-center uppercase">{title}</h2>
   <p class="text-sm my-2">{idea}</p>
   <p class="text-sm p-3 bg-primary-500 text-center text-white rounded-2xl italic my-2">{example}</p>
-  <p class="text-sm">{solution}</p>
+  <p class="text-sm {solution == null ? 'hidden' : ''}">{solution}</p>
 </div>
