@@ -1,9 +1,17 @@
 <script lang="ts">
+  // Import functions
   import { goto } from '$app/navigation';
+
+  // Import images
+  import logo from '$lib/images/logo.png';
+
+  // States
   let mobileMenuState: boolean = false;
 
+  // Props
   export let selectedPage: string;
 
+  // Functions
   function openMenu() {
     mobileMenuState = !mobileMenuState;
   }
@@ -27,12 +35,11 @@
         </button>
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <a href="/" class="flex flex-shrink-0 items-center">
-          <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-          <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-
+        <a href="/" class="flex flex-shrink-0 items-center hover:bg-primary-900 transition p-3 rounded-full">
+          <img class="block h-8 w-auto lg:hidden" src={logo} alt="Satan's Playbook Logo">
+          <img class="hidden h-8 w-auto lg:block" src={logo} alt="Satan's Playbook Logo">
         </a>
-        <div class="hidden sm:ml-6 sm:block">
+        <div class="hidden sm:ml-6 sm:block self-center">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="/" class="{selectedPage == 'index' ? 'text-white bg-primary-700 hover:bg-primary-500' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-3xl px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
