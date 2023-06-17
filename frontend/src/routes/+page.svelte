@@ -19,9 +19,12 @@
   console.log(cards);
 </script>
 
+<!-- Display Header: Emphasis "Home" link -->
 <Header selectedPage="index" />
+
+<!-- Main content -->
 <main class="container mx-auto">
-  <!-- Hero Text -->
+  <!-- Hero Heading -->
   <div class="flex gap-4 content-end pt-8 pb-16">
     <!-- Hero image -->
     <img src={playbook} alt="Soccer plan chalk board with formation tactic by fabrikasimf on Freepik" class="bg-primary-200 w-96 shadow-2xl shadow-primary-900 hover:shadow-primary-700 transition rounded-3xl basis-1/3" />
@@ -33,8 +36,12 @@
       <button type="button" class="btn w-32 mt-4 variant-filled" on:click={() => goto('/get-cards')}>Get Cards</button>
     </div>
   </div>
+
+  <!-- Cards Heading -->
   <h2 class="h2 font-bold text-3xl mb-2 text-white">Play by Play</h2>
   <hr />
+
+  <!-- Display Cards in 4x4 Grid -->
   <div class="grid grid-cols-4 grid-flow-row gap-y-8 pt-4 pb-12">
     {#each cards as card}
         <Card
@@ -49,4 +56,3 @@
     {/each}
   </div>
 </main>
-
