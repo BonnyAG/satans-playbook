@@ -4,6 +4,6 @@
   import '@skeletonlabs/skeleton/styles/skeleton.css';
 
   // Import CSS
-  import '$app.postcss';
+  import '../../../app.postcss';
 </script>
 <slot/>
