@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Satan's Playbook - Get Our Cards</title>
+</svelte:head>
+
 <script lang="ts">
   // Import components
   import Header from '$lib/components/Header.svelte';
@@ -45,7 +49,7 @@
     <!-- Explanatory Text -->
     <p class="text-center self-center">If you want something you can print yourself without having to go through Affinity or Photoshop we've created two PDF files you can download. The Double-Sided option is laid out so that when it's printed double-sided the back of the card will align with the front of the card. The Full Size option </p>
     <div class="flex self-center mt-4 gap-5">
-      <!-- Download Affinity Publisher template -->
+      <!-- Download Double Sided PDF -->
       <a href={doubleSided} download="Double Sided Cards" class="btn variant-filled">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -54,7 +58,7 @@
         </span>
         <span>Download Double-Sided PDF</span>
       </a>
-      <!-- Download Affinity Publisher template -->
+      <!-- Download Full Size PDF -->
       <a href={fullSize} download="Full Size Cards" class="btn variant-filled">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -73,7 +77,7 @@
     <!-- Explanatory Text -->
     <p class="text-center self-center">We designed our cards in <a href="https://affinity.serif.com/en-us/publisher/" class="text-primary-500 underline hover:underline-offset-4" target="_blank">Affinity Publisher</a> and we've opted to make our template available to allow you to extend the content or modify the design of our cards if you'd like. It's Available as an Affinity Publisher Package or as a series of PSD files.</p>
     <div class="flex self-center mt-4 gap-5">
-      <!-- Download Affinity Publisher package -->
+      <!-- Download Affinity Publisher Package -->
       <a href={affinityZip} download="Cards Affinity Package" class="btn variant-filled">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -82,7 +86,7 @@
         </span>
         <span>Download Affinity Publisher Package</span>
       </a>
-      <!-- Download Affinity Publisher template -->
+      <!-- Download Photoshop Templates -->
       <a href={psdZip} download="Cards PSD Package" class="btn variant-filled">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
