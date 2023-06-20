@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Satan's Playbook - About</title>
+</svelte:head>
+
 <script lang="ts">
   // Import components
   import Header from '$lib/components/Header.svelte';
@@ -9,7 +13,10 @@
   import adam from '$lib/images/adam.jpg';
 </script>
 
+<!-- Display Header: Emphasis on "About" link -->
 <Header selectedPage="about" />
+
+<!-- Main Content -->
 <main class="container mx-auto mt-10">
   <!-- Our Goal -->
   <section class="mt-8 mb-14 text-center">

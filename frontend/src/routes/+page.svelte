@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Satan's Playbook</title>
+  <title>Satan's Playbook - Home</title>
 </svelte:head>
 
 <script lang="ts">
@@ -16,10 +16,9 @@
   // Get Cards data
   export let data;
   const {cards} = data;
-  console.log(cards);
 </script>
 
-<!-- Display Header: Emphasis "Home" link -->
+<!-- Display Header: Emphasis on "Home" link -->
 <Header selectedPage="index" />
 
 <!-- Main content -->

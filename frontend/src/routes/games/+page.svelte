@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Satan's Playbook - Games</title>
+</svelte:head>
+
 <script lang="ts">
   // Import functions
   import { goto } from '$app/navigation';
@@ -7,7 +11,10 @@
 
 </script>
 
+<!-- Display Header: Emphasis on "Games" link -->
 <Header selectedPage="games" />
+
+<!-- Main Content -->
 <main class="container mx-auto mt-4">
   <!-- Hero Text -->
  <div class="grid grid-cols-2 grid-flow-row gap-8">
