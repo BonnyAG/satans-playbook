@@ -21,7 +21,7 @@
   <!-- Our Goal -->
   <section class="mt-8 mb-14 text-center">
     <h1 class="h1 text-5xl font-bold mb-5 text-white text-center">What's our goal with this project?</h1>
-    <p>Professors Parkin and Hansen came up with the idea for Satan's Playbook while teaching an Honors class at BYU. The class focused on the nature of reality and deception. A significant portion of the class focused on Cognitive Biases and Logical Fallacies, how to identify them in our daily lives and how we can learn to protect ourselves against them when they're used by ill-intentioned people. That sparked the idea to create a collection of "Spiritual Fallacies", how to identify them in our daily lives and how to combat them when they're used by an ill-intentioned adversary.</p>
+    <p>Professors Parkin and Hansen came up with the idea for Satan's Playbook while teaching an Honors class at BYU on how to avoid deception. They recognized a need for a list of spiritual fallacies similar to the Cognitive Biases and Logical Fallacies that social scientists have developed. Their goal is to help people identify these tactics used by Satan in their daily lives so they can protect themselves against them. They hired a group of students who had taken the class to help create this website and generate the cards.</p>
   </section>
 
   <!-- The Team -->
