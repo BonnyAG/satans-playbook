@@ -10,6 +10,8 @@
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
 
+  export let data;
+  const {games} = data;
 </script>
 
 <!-- Display Header: Emphasis on "Games" link -->
@@ -18,29 +20,17 @@
 <!-- Main Content -->
 <main class="font-body tracking-wide text-lg container mx-auto mt-4">
   <!-- Hero Text -->
+ <!-- GAMES START -->
  <div class="grid grid-cols-2 grid-flow-row gap-8">
-    <!-- Hero image -->
-    <div class="bg-primary-200 w-auto h-72 p-12 shadow-2xl shadow-primary-900 hover:shadow-primary-700 transition rounded-3xl basis-1/3">
-      <h2 class="h2 font-heading tracking-wider uppercase text-maroon mb-2">Game #1</h2>
-      <p class="text-primary-900">Sint aliqua reprehenderit enim reprehenderit deserunt. In elit et et exercitation do. Elit dolor id nisi pariatur occaecat eiusmod laboris. Ex esse quis culpa ut elit qui est id irure in consequat dolore. Reprehenderit ad adipisicing duis ex dolore voluptate.</p>
-      <button type="button" class="btn variant-filled-primary mt-4">Play Game</button>
-    </div>
-    <div class="bg-primary-200 w-auto h-72 p-12 shadow-2xl shadow-primary-900 hover:shadow-primary-700 transition rounded-3xl basis-1/3">
-      <h2 class="h2 font-heading tracking-wider uppercase text-maroon mb-2">Game #2</h2>
-      <p class="text-primary-900">Sint aliqua reprehenderit enim reprehenderit deserunt. In elit et et exercitation do. Elit dolor id nisi pariatur occaecat eiusmod laboris. Ex esse quis culpa ut elit qui est id irure in consequat dolore. Reprehenderit ad adipisicing duis ex dolore voluptate.</p>
-      <button type="button" class="btn variant-filled-primary mt-4">Play Game</button>
-    </div>
-    <div class="bg-primary-200 w-auto h-72 p-12 shadow-2xl shadow-primary-900 hover:shadow-primary-700 transition rounded-3xl basis-1/3">
-      <h2 class="h2 font-heading tracking-wider uppercase text-maroon mb-2">Game #3</h2>
-      <p class="text-primary-900">Sint aliqua reprehenderit enim reprehenderit deserunt. In elit et et exercitation do. Elit dolor id nisi pariatur occaecat eiusmod laboris. Ex esse quis culpa ut elit qui est id irure in consequat dolore. Reprehenderit ad adipisicing duis ex dolore voluptate.</p>
-      <button type="button" class="btn variant-filled-primary mt-4">Play Game</button>
-    </div>
-    <div class="bg-primary-200 w-auto h-72 p-12 shadow-2xl shadow-primary-900 hover:shadow-primary-700 transition rounded-3xl basis-1/3">
-      <h2 class="h2 font-heading tracking-wider uppercase text-maroon mb-2">Game #4</h2>
-      <p class="text-primary-900">Sint aliqua reprehenderit enim reprehenderit deserunt. In elit et et exercitation do. Elit dolor id nisi pariatur occaecat eiusmod laboris. Ex esse quis culpa ut elit qui est id irure in consequat dolore. Reprehenderit ad adipisicing duis ex dolore voluptate.</p>
-      <button type="button" class="btn variant-filled-primary mt-4">Play Game</button>
-    </div>
-  </div>
+    {#each games as game}
+      <div class="bg-primary-200 w-auto h-72 p-12 shadow-2xl shadow-primary-900 hover:shadow-primary-700 transition rounded-3xl basis-1/3">
+        <h2 class="h2 font-heading tracking-wider uppercase text-maroon mb-2">{game.attributes.title}</h2>
+        <p class="text-primary-900">{game.attributes.description}</p>
+        <button type="button" class="btn variant-filled-primary mt-4">Play Game</button>
+      </div>
+    {/each}
+ </div>
+ <!-- GAMES END -->
 </main>
 
 <Footer />

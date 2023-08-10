@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_options_options",
+  "info": {
+    "displayName": "Options",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    },
+    "downloadable_files": {
+      "displayName": "Downloadable Files",
+      "type": "component",
+      "repeatable": true,
+      "component": "downloadable-files.downloadable-files"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "link",
+        "download"
+      ]
+    },
+    "link_label": {
+      "type": "string"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Satan's Playbook - Home</title>
+  <title>Satan's Playbook - {homepage.page_title}</title>
 </svelte:head>
 
 <script lang="ts">
@@ -17,6 +17,9 @@
   // Get Cards data
   export let data;
   const {cards} = data;
+  const {homepage} = data;
+
+  let heroImg: string = "http://localhost:1337" + homepage.hero_image.data.attributes.formats.medium.url;
 </script>
 
 <!-- HEADER -->
@@ -28,22 +31,22 @@
   <!-- Hero Heading -->
   <div class="flex gap-4 content-end pt-8 pb-16">
     <!-- Hero image -->
-    <img src={playbook} alt="Soccer plan chalk board with formation tactic by fabrikasimf on Freepik" class="bg-primary-200 w-96 shadow-2xl shadow-primary-900 hover:shadow-maroon transition rounded-3xl basis-1/3" />
+    <img src={heroImg} alt={homepage.hero_image_alt_text} class="bg-primary-200 w-96 shadow-2xl shadow-primary-900 hover:shadow-maroon transition rounded-3xl basis-1/3" />
 
     <!-- Hero Content -->
     <div class="flex content-end self-center flex-col basis-2/3 p-6">
-      <h1 class="h1 font-heading tracking-wider uppercase font-bold text-4xl mb-4 text-white">Learn to defeat <b>Satan's Playbook</b>!</h1>
-      <p class="font-body tracking-wide text-xl">Doubting your doubts is a tricky exercise. How do you doubt your doubts while also approaching difficult questions about the Church and your faith? We think that a big part of that is to learn to avoid falling for Satan's Spiritual Fallacies. So to help you out, we've made this card game to expose Satan's Playbook!</p>
+      <h1 class="h1 font-heading tracking-wider uppercase font-bold text-4xl mb-4 text-white">{homepage.heading}</h1>
+      <p class="font-body tracking-wide text-xl">{homepage.hero_content}</p>
       <button type="button" class="font-body tracking-wider text-lg btn w-32 mt-5 variant-filled" on:click={() => goto('/get-cards')}>Get Cards</button>
     </div>
   </div>
 
   <!-- Cards Heading -->
-  <h2 class="h2 font-heading uppercase tracking-wider font-bold text-3xl mb-2 text-white">Play by Play</h2>
+  <h2 class="h2 font-heading uppercase tracking-wider font-bold text-3xl mb-2 text-white">{homepage.card_heading}</h2>
   <hr />
 
   <!-- Display Cards in 4x4 Grid -->
-  <div class="grid grid-cols-4 grid-flow-row gap-y-8 pt-4 pb-12">
+  <div class="grid grid-cols-4 grid-flow-row gap-y-8 py-4">
     {#each cards as card}
         <Card
           id={card.id}

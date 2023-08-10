@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "hero_content": {
+      "type": "richtext",
+      "required": true
+    },
+    "team_heading": {
+      "type": "string",
+      "required": true
+    },
+    "team": {
+      "displayName": "team_member",
+      "type": "component",
+      "repeatable": true,
+      "component": "team.team-member"
+    },
+    "page_title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

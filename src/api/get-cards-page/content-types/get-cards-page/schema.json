@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "get_cards_pages",
+  "info": {
+    "singularName": "get-cards-page",
+    "pluralName": "get-cards-pages",
+    "displayName": "Get Cards Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "options": {
+      "displayName": "Options",
+      "type": "component",
+      "repeatable": true,
+      "component": "options.options"
+    },
+    "page_title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

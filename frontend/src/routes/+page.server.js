@@ -8,7 +8,11 @@ export const load = async ({ fetch }) => {
   const cardResult = await fetch('http://localhost:1337/api/cards?pagination[limit]=100&populate=*&sort[0]=title');
   const cardData = await cardResult.json();
   
+  const homepageResult = await fetch('http://localhost:1337/api/homepage?populate=*');
+  const homepageData = await homepageResult.json();
+
   return {
-        cards: cardData.data
+        cards: cardData.data,
+        homepage: homepageData.data.attributes,
   }
 }
