@@ -6,6 +6,7 @@
 <script>
   // Import Components
   import Header from '$lib/components/Header.svelte';
+  import Footer from '$lib/components/Footer.svelte';
   import Card from '$lib/components/Card.svelte';
 
   // Get Cards data
@@ -36,37 +37,37 @@
     />
 
     <!-- Hero Content -->
-    <div class="flex content-end flex-col basis-2/3 px-6">
+    <div class="font-body tracking-wider text-lg flex content-end flex-col basis-2/3 px-6">
       <!-- Card Title -->
       <div class="flex justify-between content-end mt-[-1rem]">
-        <h1 class="h1 font-bold self-end">{card.attributes.title}</h1>
+        <h1 class="h1 font-heading uppercase tracking-wider font-bold self-end">{card.attributes.title}</h1>
         <a href="/" type="button" class="btn variant-filled w-48 self-center mb-1">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
             </svg>
           </span>
-          <span>Back to Cards</span>
+          <span class="font-body tracking-wider text-md">Back to Cards</span>
         </a>
       </div>
       <hr class="mt-2 mb-5"/>
 
       <!-- Definition of the Spiritual Fallacy -->
-      <p><b>Definition: </b>{card.attributes.idea_full == null ? card.attributes.idea_short : card.attributes.idea_full}</p>
+      <p ><b>Definition: </b>{card.attributes.idea_full == null ? card.attributes.idea_short : card.attributes.idea_full}</p>
 
       <!-- Example -->
-      <div class="text-white bg-primary-600 rounded-xl p-3 mt-8 ">
-        <h2 class="h2 mb-2 font-bold">What does this look like?</h2>
+      <div class="text-white bg-maroon rounded-xl p-3 mt-8 ">
+        <h2 class="h2 mb-2 font-heading tracking-wider uppercase font-bold">What does this look like?</h2>
         <p>{card.attributes.example_long == null ? card.attributes.example_short : card.attributes.example_long}</p>
       </div>
 
       <!-- Solution -->
-      <h2 class="h2 mt-8 mb-2 font-bold">What do I do about it?</h2>
+      <h2 class="h2 mt-8 mb-2 font-heading tracking-wider uppercase font-bold">What do I do about it?</h2>
       <p>{card.attributes.solution_long == null ? card.attributes.solution_short : card.attributes.solution_long}</p>
 
       <!-- Resources -->
       {#if card.attributes.reference.length > 0}
-        <h2 class="h2 mt-8 mb-2 font-bold">More Resources</h2>
+        <h2 class="h2 mt-8 mb-2 font-heading tracking-wider uppercase font-bold">More Resources</h2>
         <nav class="list-nav">
           <ul>
             {#each card.attributes.reference as reference}
@@ -89,3 +90,5 @@
   </div>
 
 </main>
+
+<Footer />

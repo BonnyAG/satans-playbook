@@ -11,7 +11,16 @@ module.exports = {
     )
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'mono': ['"American Typewriter"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+        'heading': ['Impact', 'ui-sans-serif', 'system-ui'],
+        'body': ['"Avenir Next Condensed"', 'ui-sans-serif', 'system-ui'],
+      },
+      colors: {
+        maroon: '#D22229',
+      },
+    },
   },
   plugins: [
     // 3. Append the Skeleton plugin to the end of this list

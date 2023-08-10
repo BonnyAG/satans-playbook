@@ -13,22 +13,26 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "idea_short": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 115
     },
     "idea_full": {
       "type": "richtext"
     },
     "example_short": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 140
     },
     "example_long": {
       "type": "richtext"
     },
     "solution_short": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 155
     },
     "solution_long": {
       "type": "richtext"

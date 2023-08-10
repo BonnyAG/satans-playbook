@@ -5,6 +5,7 @@
 <script lang="ts">
   // Import components
   import Header from '$lib/components/Header.svelte';
+  import Footer from '$lib/components/Footer.svelte';
   import TeamMemberCard from '$lib/components/TeamMemberCard.svelte';
 
   // Import images
@@ -17,16 +18,16 @@
 <Header selectedPage="about" />
 
 <!-- Main Content -->
-<main class="container mx-auto mt-10">
+<main class="font-body tracking-wide text-lg container mx-auto mt-10">
   <!-- Our Goal -->
   <section class="mt-8 mb-14 text-center">
-    <h1 class="h1 text-5xl font-bold mb-5 text-white text-center">What's our goal with this project?</h1>
+    <h1 class="h1 font-heading tracking-wider uppercase text-5xl mb-5 text-white text-center">What's our goal with this project?</h1>
     <p>Professors Parkin and Hansen came up with the idea for Satan's Playbook while teaching an Honors class at BYU on how to avoid deception. They recognized a need for a list of spiritual fallacies similar to the Cognitive Biases and Logical Fallacies that social scientists have developed. Their goal is to help people identify these tactics used by Satan in their daily lives so they can protect themselves against them. They hired a group of students who had taken the class to help create this website and generate the cards.</p>
   </section>
 
   <!-- The Team -->
   <section>
-    <h1 class="h1 text-5xl font-bold mb-5 text-white text-center">Who are we?</h1>
+    <h1 class="h1 font-heading tracking-wider uppercase text-5xl mb-5 text-white text-center">Who are we?</h1>
     <div class="flex justify-between gap-6">
       <TeamMemberCard
         imgSrc={derek}
@@ -50,3 +51,4 @@
   </section>
 </main>
 
+<Footer />

@@ -5,6 +5,7 @@
 <script lang="ts">
   // Import components
   import Header from '$lib/components/Header.svelte';
+  import Footer from '$lib/components/Footer.svelte';
 
   // Import files
   import doubleSided from '$lib/files/double_sided.pdf';
@@ -15,17 +16,17 @@
 </script>
 
 <Header selectedPage="" />
-<main class="container mx-auto mt-10 flex flex-col">
+<main class="font-body text-lg tracking-wide container mx-auto mt-10 flex flex-col">
   <!-- Main Title -->
   <section class="flex flex-col mb-10 w-[40rem] self-center">
-    <h1 class="h1 text-5xl font-bold mb-2 text-white text-center">How do you get our cards?</h1>
+    <h1 class="h1 font-heading tracking-wider uppercase text-5xl font-bold mb-2 text-white text-center">How do you get our cards?</h1>
     <p class="text-center self-center">We want this project to help as many people as possible so we didn't want to make these cards only available at a cost. We've come up with a few options for how to get these cards for you, your friends, and your family to enjoy!</p>
   </section>
 
   <!-- Order Section -->
   <section class="flex flex-col mb-10 w-[50rem] self-center">
     <!-- Title -->
-    <h2 class="h2 text-4xl font-bold mt-4 text-white text-center mb-4">Option #1: Place an order</h2>
+    <h2 class="h2 font-heading tracking-wider uppercase text-4xl font-bold mt-4 text-white text-center mb-4">Option #1: Place an order</h2>
     <!-- Explanatory Text -->
     <p class="text-center self-center">The simplest way to get our cards is to place an order. Since this is a BYU project it will redirect you to a BYU shopping page.</p>
     <div class="flex self-center mt-4">
@@ -45,7 +46,7 @@
   <!-- Download PDF Section -->
   <section class="flex flex-col mb-10 w-[50rem] self-center">
     <!-- Title -->
-    <h2 class="h2 text-4xl font-bold mt-4 text-white text-center mb-4">Option #2: Download a Printable PDF</h2>
+    <h2 class="h2 font-heading tracking-wider uppercase text-4xl font-bold mt-4 text-white text-center mb-4">Option #2: Download a Printable PDF</h2>
     <!-- Explanatory Text -->
     <p class="text-center self-center">If you want something you can print yourself without having to go through Affinity or Photoshop we've created two PDF files you can download. The Double-Sided option is laid out so that when it's printed double-sided the back of the card will align with the front of the card. The Full Size option </p>
     <div class="flex self-center mt-4 gap-5">
@@ -73,7 +74,7 @@
   <!-- Download Template Section -->
   <section class="flex flex-col mb-10 w-[50rem] self-center">
     <!-- Title -->
-    <h2 class="h2 text-4xl font-bold mt-4 text-white text-center mb-4">Option #3: Download our Template</h2>
+    <h2 class="h2 font-heading tracking-wider uppercase text-4xl font-bold mt-4 text-white text-center mb-4">Option #3: Download our Template</h2>
     <!-- Explanatory Text -->
     <p class="text-center self-center">We designed our cards in <a href="https://affinity.serif.com/en-us/publisher/" class="text-white underline hover:underline-offset-4" target="_blank">Affinity Publisher</a> and we've opted to make our template available to allow you to extend the content or modify the design of our cards if you'd like. It's Available as an Affinity Publisher Package or as a series of PSD files.</p>
     <div class="flex self-center mt-4 gap-5">
@@ -98,3 +99,5 @@
     </div>
   </section>
 </main>
+
+<Footer />
