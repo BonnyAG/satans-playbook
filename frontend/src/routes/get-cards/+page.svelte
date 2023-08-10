@@ -7,12 +7,6 @@
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
 
-  // Import files
-  import doubleSided from '$lib/files/double_sided.pdf';
-  import fullSize from '$lib/files/full_size.pdf';
-  import affinityZip from '$lib/files/affinity_pkg.zip';
-  import psdZip from '$lib/files/psd_pkg.zip';
-
   export let data;
   const {page} = data;
 </script>
