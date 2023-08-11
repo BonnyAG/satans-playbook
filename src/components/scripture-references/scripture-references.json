@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_scripture_references_scripture_references",
+  "info": {
+    "displayName": "Scripture References"
+  },
+  "options": {},
+  "attributes": {
+    "volume": {
+      "type": "enumeration",
+      "enum": [
+        "Old Testament",
+        "New Testament",
+        "Book of Mormon",
+        "Doctrine & Covenants",
+        "Pearl of Great Price"
+      ]
+    },
+    "book": {
+      "type": "string"
+    },
+    "chapter": {
+      "type": "integer"
+    },
+    "verses": {
+      "type": "string"
+    }
+  }
+}

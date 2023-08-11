@@ -6,6 +6,6 @@ export const load = async ({ fetch, params }) => {
   const result = await fetch(`http://localhost:1337/api/cards/${params.id}?populate=*`);
     const data = await result.json();
     return {
-        card: data.data
+        card: data.data.attributes
     }
 }

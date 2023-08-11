@@ -15,7 +15,6 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "scriptures",
         "prophets_and_apostles",
         "social_science",
         "article",

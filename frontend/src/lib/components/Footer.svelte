@@ -9,7 +9,7 @@
   let footerPromise = getFooterData();
 </script>
 
-<footer class="mx-auto my-12 container px-2 font-body text-md tracking-wide flex justify-between">
+<footer class="mx-auto my-12 container px-2 font-body text-md tracking-wide text-center sm:text-start flex flex-col xl:flex-row xl:justify-between">
   {#await footerPromise}
     <p>Loading footer...</p>
   {:then footer}

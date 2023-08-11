@@ -35,8 +35,11 @@
     "hero_image_alt_text": {
       "type": "string"
     },
-    "page_title": {
+    "meta_title": {
       "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
     }
   }
 }

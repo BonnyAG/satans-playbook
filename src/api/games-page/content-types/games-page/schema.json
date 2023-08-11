@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "games_pages",
+  "info": {
+    "singularName": "games-page",
+    "pluralName": "games-pages",
+    "displayName": "Games Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
+    }
+  }
+}

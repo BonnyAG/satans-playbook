@@ -1,5 +1,6 @@
 <svelte:head>
-  <title>Satan's Playbook - {page.page_title}</title>
+  <title>Satan's Playbook - {page.meta_title}</title>
+  <meta name="description" content={page.meta_description} />
 </svelte:head>
 
 <script lang="ts">
@@ -16,7 +17,7 @@
 <Header selectedPage="about" />
 
 <!-- MAIN CONTENT START -->
-<main class="font-body tracking-wide text-lg container mx-auto mt-10">
+<main class="font-body tracking-wide text-lg container px-8 lg:px-4 mx-auto mt-10">
 
   <!-- HERO CONTENT START -->
   <section class="mt-8 mb-14 text-center">
@@ -31,7 +32,7 @@
     <h1 class="h1 font-heading tracking-wider uppercase text-5xl mb-5 text-white text-center">{page.team_heading}</h1>
 
     <!-- TEAM CARDS START -->
-    <div class="grid grid-cols-4 grid-flow-row gap-y-8 gap-x-4 py-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 grid-flow-row justify-items-center gap-y-8 gap-x-4 py-4">
       {#each page.team as member}
         <TeamMemberCard
           imgSrc={`http://localhost:1337${member.profile_image.data.attributes.url}`}

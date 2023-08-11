@@ -37,11 +37,17 @@
     "solution_long": {
       "type": "richtext"
     },
-    "reference": {
+    "link_reference": {
       "displayName": "references",
       "type": "component",
       "repeatable": true,
       "component": "references.references"
+    },
+    "scripture_references": {
+      "displayName": "Scripture References",
+      "type": "component",
+      "repeatable": true,
+      "component": "scripture-references.scripture-references"
     }
   }
 }

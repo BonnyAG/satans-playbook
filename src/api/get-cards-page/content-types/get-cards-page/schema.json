@@ -24,9 +24,12 @@
       "repeatable": true,
       "component": "options.options"
     },
-    "page_title": {
+    "meta_title": {
       "type": "string",
       "required": true
+    },
+    "meta_description": {
+      "type": "text"
     }
   }
 }

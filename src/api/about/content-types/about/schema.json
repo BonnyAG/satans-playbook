@@ -31,9 +31,12 @@
       "repeatable": true,
       "component": "team.team-member"
     },
-    "page_title": {
+    "meta_title": {
       "type": "string",
       "required": true
+    },
+    "meta_description": {
+      "type": "text"
     }
   }
 }

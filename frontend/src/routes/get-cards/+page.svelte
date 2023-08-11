@@ -1,5 +1,6 @@
 <svelte:head>
-  <title>Satan's Playbook - {page.page_title}</title>
+  <title>Satan's Playbook - {page.meta_title}</title>
+  <meta name="description" content={page.meta_description} />
 </svelte:head>
 
 <script lang="ts">
@@ -15,23 +16,23 @@
 <Header selectedPage="" />
 
 <!-- MAIN CONTENT START -->
-<main class="font-body text-lg tracking-wide container mx-auto mt-10 flex flex-col">
+<main class="font-body text-lg tracking-wide container mx-auto px-8 lg:px-4 mt-10 flex flex-col">
   <!-- HEADING START -->
-  <section class="flex flex-col mb-10 w-[40rem] self-center">
+  <section class="flex flex-col mb-10 lg:w-[40rem] self-center">
     <h1 class="h1 font-heading tracking-wider uppercase text-5xl font-bold mb-2 text-white text-center">{page.heading}</h1>
     <p class="text-center self-center">{page.description}</p>
   </section>
 
   <!-- OPTIONS START -->
   {#each page.options as option}
-    <section class="flex flex-col w-[50rem] self-center">
+    <section class="flex flex-col lg:w-[50rem] self-center">
       <!-- Title -->
       <h2 class="h2 font-heading tracking-wider uppercase text-4xl font-bold mt-4 text-white text-center mb-4">{option.title}</h2>
       <!-- Explanatory Text -->
       <p class="text-center self-center">{option.details}</p>
 
       <!-- BUTTONS START -->
-      <div class="flex self-center gap-x-4 mt-4">
+      <div class="flex flex-col gap-y-4 md:gap-y-0 md:flex-row self-center gap-x-4 mt-4">
         {#if option.type === 'link'}
           <!-- LINK BUTTON -->
           <button type="button" class="btn variant-filled-primary">
@@ -64,8 +65,8 @@
 
     </section>
   {/each}
-
   <!-- OPTIONS END -->
+
 </main>
 <!-- MAIN CONTENT START -->
 
